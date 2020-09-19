@@ -13,12 +13,5 @@ node{
         Thanks
          Vabby''', cc: '', from: '', replyTo: '', subject: 'jenkins job', to: 'vaibhav.08patil@gmail.com'
      }    
-     stage('Slack Notification')
-      slackSend baseUrl: 'https://hooks.slack.com/services/', 
-      channel: '#jenkins-pipeline-deom', 
-      color: 'good', 
-      message: 'WElcome to Jenkins, Slack!', 
-      teamDomain: 'https://hooks.slack.com/services/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', 
-      tokenCredentialId: 'slack-demo', username: 'vabby111'
-    } 
+     
 }     
