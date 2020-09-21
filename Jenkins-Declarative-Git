@@ -1,10 +1,22 @@
 pipeline{
     agent any
+    
+    environment{
+         PATH = "/opt/mvn3/bin:$PATH"
+    }
     stages{
-        stage("Welcome"){
+        stage("Git Checkout"){
             steps{
                 git 'https://github.com/vaibhavops111/my-appvabby'
             }
         }
+        stage("Maven Build"){
+             steps{
+                sh "mvn clean package"
+             
+             }
+             
+        }
     }
+   
 }
